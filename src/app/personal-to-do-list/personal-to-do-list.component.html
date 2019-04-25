@@ -1,0 +1,24 @@
+<h4 [class.redmode] = "redMode">{{title}}</h4>
+<div  id="todo-list">
+  <div *ngIf ="tasks.length == 0">
+    List is EMPTY!
+  </div>
+  <div *ngFor = "let task of tasks; let i = index" 
+  class ="todo-item"
+  (click) = "onClickItem(i)"
+  [class.nightmode]="nightMode" 
+  [class.completed]="task.completed"
+
+  [class.hovered]="task.hovered"
+  (mouseenter) = "onHoverItem(i)"
+  (mouseleave) = "!onHoverItem(i)"
+  >{{task.label}}
+<span *ngIf ="i === 0">- First</span>
+</div>
+    
+</div>
+<div id="creator">{{creator}}</div>
+
+<button (click) = "onClickButton()">Night Mode</button>
+<button (click) = "onClickRed()">Red Word</button>
+<button (click) = "onClickClear()">Clear List</button>

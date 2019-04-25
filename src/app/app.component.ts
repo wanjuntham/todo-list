@@ -6,5 +6,62 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-list';
+  todolists = [{
+    title: "list 1",
+    tasks: [
+      {
+        label: 'Go To Work',
+        completed: false,
+        hovered: false,
+      },
+      {
+        label: 'Buy Groceries',
+        completed: false,
+        hovered: false,
+      },
+      {
+        label: 'Mark Assignments',
+        completed: false,
+        hovered: false,
+      },
+      {
+        label: 'Go Home',
+        completed: false,
+        hovered: false,
+      },
+
+    
+    ]
+
+    
+  },
+  {
+    title: "list 2",
+    tasks: [
+      {
+        label: 'Go To Work',
+        completed: false,
+        hovered: false,
+      },
+      {
+        label: 'Buy Groceries',
+        completed: false,
+        hovered: false,
+      },
+      {
+        label: 'Mark Assignments',
+        completed: false,
+        hovered: false,
+      },
+      {
+        label: 'Go Home',
+        completed: false,
+        hovered: false,
+      },
+
+    
+    ]
+
+    
+  }]
 }
